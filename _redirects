@@ -1,0 +1,4 @@
+# Cloudflare Pages resolves clean/extensionless URLs and slug/index.html routing natively.
+# Intentionally left empty of rules -- see network master rule (Section 12): mixing 200-rewrites
+# with 301s here has caused ERR_TOO_MANY_REDIRECTS loops on prior sites. Add only for a genuine
+# cross-domain or legacy-path redirect need.
