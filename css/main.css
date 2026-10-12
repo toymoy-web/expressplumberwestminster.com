@@ -187,3 +187,8 @@ footer .fcol a:hover{color:var(--turq-d)}
 .hero-img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:16px;display:block}
 .about-img{width:100%;max-width:880px;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin:0 auto 28px;display:block}
 .blog-img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:24px;display:block}
+
+/* FAQ / stacked rows: question above answer, full width (fixes .tocrow p right-aligned narrow column) */
+.tocrow.faq-row{display:block;padding:18px 4px}
+.tocrow.faq-row .faq-q{margin-bottom:6px}
+.tocrow.faq-row .faq-a{text-align:left;max-width:none;margin:0;font-size:15px;color:var(--ink)}
