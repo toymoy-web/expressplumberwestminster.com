@@ -2,3 +2,17 @@
 # Intentionally left empty of rules -- see network master rule (Section 12): mixing 200-rewrites
 # with 301s here has caused ERR_TOO_MANY_REDIRECTS loops on prior sites. Add only for a genuine
 # cross-domain or legacy-path redirect need.
+
+# Blog slugs renamed to include the city (v11)
+/blog/colorado-dora-plumbing-code-explained/ /blog/colorado-dora-plumbing-code-westminster/ 301
+/blog/colorado-dora-plumbing-code-explained /blog/colorado-dora-plumbing-code-westminster/ 301
+/blog/first-10-minutes-plumbing-emergency/ /blog/first-10-minutes-plumbing-emergency-westminster/ 301
+/blog/first-10-minutes-plumbing-emergency /blog/first-10-minutes-plumbing-emergency-westminster/ 301
+/blog/frozen-pipes-front-range-what-to-do/ /blog/frozen-pipes-westminster-what-to-do/ 301
+/blog/frozen-pipes-front-range-what-to-do /blog/frozen-pipes-westminster-what-to-do/ 301
+/blog/garbage-disposal-wont-turn-on-troubleshooting/ /blog/garbage-disposal-wont-turn-on-westminster/ 301
+/blog/garbage-disposal-wont-turn-on-troubleshooting /blog/garbage-disposal-wont-turn-on-westminster/ 301
+/blog/hydro-jetting-vs-drain-snaking/ /blog/hydro-jetting-vs-drain-snaking-westminster/ 301
+/blog/hydro-jetting-vs-drain-snaking /blog/hydro-jetting-vs-drain-snaking-westminster/ 301
+/blog/sump-pumps-spring-snowmelt-colorado/ /blog/sump-pumps-spring-snowmelt-westminster/ 301
+/blog/sump-pumps-spring-snowmelt-colorado /blog/sump-pumps-spring-snowmelt-westminster/ 301

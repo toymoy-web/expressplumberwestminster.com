@@ -14,8 +14,8 @@
 :root[data-theme="dark"]{ --bg:#1B1512; --ink:#F3ECE4; --line:#3A2C22; --nav-bg:#241A15; --gray:#C9BFB4; }
 
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-padding-top:70px;overflow-x:hidden}
-body{overflow-x:hidden}
+html{scroll-padding-top:70px}
+body{overflow-x:clip}
 p{margin-bottom:1em}
 p:last-child{margin-bottom:0}
 body{font-family:var(--font-body);color:var(--ink);background:var(--bg);line-height:1.65;font-size:16px}
@@ -192,3 +192,60 @@ footer .fcol a:hover{color:var(--turq-d)}
 .tocrow.faq-row{display:block;padding:18px 4px}
 .tocrow.faq-row .faq-q{margin-bottom:6px}
 .tocrow.faq-row .faq-a{text-align:left;max-width:none;margin:0;font-size:15px;color:var(--ink)}
+
+
+/* ===== v11: paragraph rhythm ===== */
+main p + p{margin-top:14px}
+main h2 + p,main h3 + p{margin-top:0}
+main h2,main h3{margin-bottom:14px}
+.sec h2{margin-bottom:14px}
+main p{max-width:72ch}
+main p,main li,main a,main h1,main h2,main h3{overflow-wrap:anywhere}
+main .twocol article p{max-width:none}
+.hero.has-hero + .sec--tight{padding-top:40px}
+main .lead,main .faq-a,main .pricenote,main .direct-answer{max-width:none}
+
+@media(max-width:768px){.tocrow p,.tocrow h3,.tocrow a{flex-shrink:1;min-width:0;max-width:100%}.tocrow p{flex-basis:100%}}
+
+/* ===== v11: hero background image ===== */
+.hero.has-hero{position:relative;isolation:isolate;padding:72px 0 64px;color:#fff;overflow:hidden}
+.hero.has-hero .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;display:block;border-radius:0;margin:0}
+.hero.has-hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(26,14,8,.90) 0%,rgba(26,14,8,.74) 52%,rgba(26,14,8,.50) 100%)}
+.hero.has-hero h1,.hero.has-hero p.lead,.hero.has-hero .kick{color:#fff}
+.hero.has-hero h1 em{color:#7FE9E9}
+.hero.has-hero p.lead{border-left-color:var(--turq)}
+.hero.has-hero .btn.ghost{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.65)}
+.hero.has-hero .btn.ghost:hover{background:#fff;color:var(--choc-d)}
+.hero.has-hero .zip-chip{background:rgba(255,255,255,.16);color:#fff;border:1px solid rgba(255,255,255,.4)}
+.hero.has-hero .badge-alt{background:var(--turq);color:var(--choc-d)}
+.hero.has-hero .badge-alt::before{background:var(--choc-d)}
+.hero.has-hero .sidebox{background:rgba(255,255,255,.97);color:#231911;border-color:#fff}
+.hero.has-hero .sidebox .kick{color:var(--turq-d)}
+.hero.has-hero .sidebox .num{color:var(--choc)}
+.hero.has-hero .sidebox li{border-top-color:#EDE4DC}
+.hero.has-hero .wrap.hero-solo{grid-template-columns:minmax(0,780px)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .hero.has-hero .sidebox .num{color:var(--choc)}}
+@media(max-width:900px){.hero.has-hero{padding:48px 0 44px}.hero.has-hero:before{background:linear-gradient(180deg,rgba(26,14,8,.86),rgba(26,14,8,.78))}}
+
+/* ===== v11: two column layout and sticky sidecard ===== */
+.twocol{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:44px;align-items:start}
+.twocol > article{min-width:0}
+.sidecard{position:sticky;top:76px;align-self:start;background:var(--nav-bg);border:2px solid var(--choc);border-radius:8px;padding:22px}
+.sidecard .kick{margin-bottom:8px}
+.sidecard h3{font-size:21px;line-height:1.2;margin-bottom:8px}
+.sidecard p{font-size:14.5px;color:var(--gray);margin-bottom:14px}
+.sidecard .btn{width:100%;justify-content:center;margin-bottom:16px}
+.sidecard ul{list-style:none;font-size:14px;margin-bottom:12px}
+.sidecard li{padding:7px 0 7px 22px;border-top:1px solid var(--line);position:relative}
+.sidecard li:before{content:"";position:absolute;left:2px;top:14px;width:9px;height:9px;border-radius:50%;background:var(--turq)}
+.sidecard .sidelink{font-size:13.5px;margin:0}
+.sidecard .sidelink a{color:var(--turq-d);font-weight:700}
+@media(max-width:900px){.twocol{grid-template-columns:1fr;gap:28px}.sidecard{position:static}}
+
+/* ===== v11: emergency block, prep card in articles, local note ===== */
+.prepcard h3{font-size:19px;margin-bottom:10px}
+article .prepcard{max-width:none;margin:22px 0}
+.localnote{border-left:4px solid var(--turq);background:var(--line);border-radius:6px;padding:20px 24px;margin:32px 0}
+.localnote h2{font-size:22px;margin:0 0 12px}
+.localnote .srcnote{font-size:13px;color:var(--gray)}
+.localnote a{color:var(--turq-d);font-weight:700}
