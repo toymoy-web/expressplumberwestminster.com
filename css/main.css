@@ -252,3 +252,10 @@ article .prepcard{max-width:none;margin:22px 0}
 
 footer .fsocial a{display:block}
 footer .fsocial a:focus-visible{outline:2px solid var(--turq-d);outline-offset:2px}
+
+/* neighborhood pages (additive) */
+.hero--text .wrap{grid-template-columns:minmax(0,820px)}
+.srcnote{font-size:13px;color:var(--gray)}
+.srcnote a{color:var(--turq-d)}
+.hoodlinks{margin-top:32px}
+.hoodlinks h3{margin:6px 0 8px}
